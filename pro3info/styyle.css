@@ -1,0 +1,568 @@
+body{
+    color: #333;
+}
+
+.logo{
+    filter: drop-shadow(1px 1px 20px black);
+    width:50px;
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.cart-icon {
+    position: absolute; /* relative to nav */
+    top: 35px;
+    left: 1800px;
+    font-size: 40px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.cart-icon .cart-item-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #e35f26;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    display: block; /* show it unless you want to hide by default */
+}
+
+
+
+.pose1{
+    position: absolute;
+    width: 370px;
+    top: 250px;
+    left: 770px;
+    border-radius: 30px;
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose1:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.pose2{
+    position: absolute;
+    width: 200px;
+    top: 330px;
+    left: 550px;
+    border-radius: 30px; 
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose2:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.pose3{
+    position: absolute;
+    width: 200px;
+    top: 330px;
+    left: 1160px;
+    border-radius: 30px; 
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose3:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.namee{
+    position: absolute;
+    top: 650px;
+    font-size: 40px;
+    left: 795px;
+}
+.rating{
+    position:absolute ;
+    top: 730px;
+    font-size: 30px;
+    left: 795px;
+}
+.stars{
+    position: absolute;
+    top: 763px;
+    left: 930px;
+    width: 150px;
+}
+.left{
+    position: absolute;
+    top: 813px;
+    left: 840px;
+    font-size: 35px;
+    color: rgb(155, 5, 5);
+}
+.num{
+    font-size: 30px;
+    position: absolute;
+    top: 870px;
+    left: 900px;
+    color: rgb(0, 190, 0);
+}
+.add-to-cart{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    top: 950px;
+    left: 795px;
+    font-size: 15px;
+    border: 2px solid gray;
+    color: white;
+    border-radius: 5px;
+    border-top: 0;
+    border-left: 0;
+    background-color: rgb(194, 0, 0);
+    transition: background-color .36s;
+    cursor: pointer;
+}
+.add-to-cart:hover{
+    background-color: rgb(218, 1, 1);
+}
+.add-to-cart:active{
+    background-color: rgb(68, 0, 0);
+}
+.cart {
+    color: #fff;
+    position: fixed;
+    top: 120px;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: right 1s;
+}
+
+.cart h2 {
+    color: #e80e0e;
+    padding: 20px;
+    margin: 0;
+}
+
+.listCart {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.listCart .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #18191b;
+    border-radius: 10px;
+    padding: 10px 10px 35px 10px;
+    min-height: 80px;
+}
+
+.listCart .item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.listCart .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+    gap: 2px;
+}
+
+.listCart .content .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.listCart .content .price {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 2px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid #222;
+}
+
+.listCart .item .close {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #e35f26;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.buttons .close {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons .checkout a {
+    background-color: #ff0000;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.name4{
+    top: 25px;
+    left: 90px;
+}
+.price4{
+    top: 40px;
+    left:90px ;
+}
+.buttons{
+    position: absolute;
+    left: 200px;
+}
+.content .quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.quantity button {
+    background-color: #e80e0e;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    left: 200px;
+    top: 50px;
+}
+
+.quantity .count {
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.buttons{
+    position: absolute;
+    top: 800px;
+}
+@media (max-width: 678px) {
+
+.logo{
+    filter: drop-shadow(1px 1px 20px black);
+    width:50px;
+    text-decoration: none;
+    left: 0px;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.cart-icon {
+    position: fixed;       
+    top: 40px;
+    left: 299px;
+    font-size: 40px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.cart-icon .cart-item-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #e35f26;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    display: block; 
+}
+
+.pose1{
+    position: absolute;
+    width: 150px;
+    top: 170px;
+    left: 120px;
+    border-radius: 30px;
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose1:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.pose2{
+    position: absolute;
+    width: 100px;
+    top: 200px;
+    left: 5px;
+    border-radius: 10px; 
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose2:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.pose3{
+    position: absolute;
+    width: 100px;
+    top: 200px;
+    left: 290px;
+    border-radius: 10px; 
+    cursor: grab;
+    transition: transform 1s;
+}
+.pose3:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px ;
+}
+.namee{
+    position: absolute;
+    top: 400px;
+    font-size: 30px;
+    left: 80px;
+}
+.rating{
+    position:absolute ;
+    top: 450px;
+    font-size: 30px;
+    left: 80px;
+}
+.stars{
+    position: absolute;
+    top: 485px;
+    left: 190px;
+    width: 150px;
+}
+.left{
+    position: absolute;
+    top: 513px;
+    left: 100px;
+    font-size: 35px;
+    color: rgb(155, 5, 5);
+}
+.num{
+    font-size: 30px;
+    position: absolute;
+    top: 590px;
+    left: 160px;
+    color: rgb(0, 190, 0);
+}
+.add-to-cart{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    top: 700px;
+    left: 60px;
+    font-size: 15px;
+    border: 2px solid gray;
+    color: white;
+    border-radius: 5px;
+    border-top: 0;
+    border-left: 0;
+    background-color: rgb(194, 0, 0);
+    transition: background-color .36s;
+    cursor: pointer;
+}
+.add-to-cart:hover{
+    background-color: rgb(218, 1, 1);
+}
+.add-to-cart:active{
+    background-color: rgb(68, 0, 0);
+}
+
+/* 🛒 CART PANEL STYLES */
+.cart {
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -150%;
+    width: 100%;
+    height: 110vh;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    transition: right 1s;
+    z-index: 999;
+}
+
+.cart h2 {
+    color: #e80e0e;
+    padding: 20px;
+    margin: 0;
+}
+
+/* 🧷 Sticky buttons on top */
+.buttons {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0e0f11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-top: 1px solid #222;
+  z-index: 1000;
+}
+
+
+.buttons .close {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.buttons .checkout a {
+    background-color: #ff0000;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.listCart {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.listCart .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #18191b;
+    border-radius: 10px;
+    padding: 10px 10px 35px 10px;
+    min-height: 80px;
+}
+
+.listCart .item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.listCart .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+    gap: 2px;
+}
+
+.listCart .content .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.listCart .content .price {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 2px;
+}
+
+.listCart .item .close {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #e35f26;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.content .quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.quantity button {
+    background-color: #e80e0e;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity .count {
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+}

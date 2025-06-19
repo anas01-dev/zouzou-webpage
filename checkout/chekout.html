@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="../index.html">
+      <img src="pics/IMG-20250610-WA0000-removebg-preview.png" class="logo" />
+    </a>
+  </nav>
+
+  <h1 class="checkout">Checkout</h1>
+
+  <!-- Display Cart Items -->
+  <div class="cartSum" id="cart-summary"></div>
+
+  <!-- Checkout Form -->
+  <form id="order-form" action="https://formsubmit.co/nizarbrenji666@gmail.com" method="POST">
+  <h2>Client Info</h2>
+  <input class="nameSub" type="text" name="name" placeholder="Your Full name" required />
+  <input class="emailSub" type="email" name="Email" placeholder="Your Email" required />
+  <input class="phoneSub" type="text" name="Phone" placeholder="Your Phone" required />
+  <input class="adressSub" type="text" name="Address" placeholder="Shipping Address" required />
+
+  <input type="hidden" name="Order_Details" id="orderDetailsInput" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="thankyou.html" />
+
+  <button type="submit">Send Order</button>
+</form>
+
+
+  <script src="send.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f9fc;
+  color: #222;
+  min-height: 100vh;
+  padding-top: 80px; /* space for fixed nav */
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  width: 60px;
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+
+/* Page Title */
+.checkout {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+/* Main container */
+body > form, #cart-summary {
+  max-width: 500px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+}
+
+/* Cart Summary */
+#cart-summary {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#cart-summary h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+#cart-summary ul {
+  list-style: none;
+}
+
+#cart-summary li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #444;
+}
+
+#cart-summary li:last-child {
+  border-bottom: none;
+}
+
+/* Form styles */
+form h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit Button */
+form button[type="submit"] {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+form button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px 20px;
+  }
+  .logo {
+    width: 45px;
+  }
+  body > form, #cart-summary {
+    width: 90%;
+    padding: 20px;
+  }
+  .checkout {
+    font-size: 2rem;
+  }
+}
+
